@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+*
+{
+    margin 0 :
+    padding: 0;
+box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.container h2
+{
+    width: 100%;
+    font-family: cursive;
+    color:#000000;
+    font-size: 38px;
+    text-align:center;
+    margin-bottom: 10px;
+}
+.container h3
+{
+    width: 100%;
+    font-family: cursive;
+    color:#000000;
+    font-size: 25px;
+    text-align:right;
+    margin-bottom: 10px;
+}
+.container .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.container .row100 .col
+{position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+
+}
+.container .row100 .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #0d0555;
+    font-weight:bold;
+}
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index:1;
+color:#64617f;
+}
+.container .row100 .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+.container .row100 .inputBox input:focus +.text,
+.container .row100 .inputBox input:valid + .text 
+{
+    top: -35px;
+    left: -10px;
+}  .container .row100 .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #fffd81;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+::placeholder{
+    color: rgb(131, 131, 131);
+}
+.container .row100 .inputBox  input:focus ~ .line,
+.container .row100 .inputBox  input:valid ~ .line
+{
+height: 100%;
+}
+.container .row100 .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .inputBox.textarea textarea{
+height: 100%;
+resize: none;
+}
+.container .row100 .inputBox textarea:focus +.text,
+.container .row100 .inputBox textarea:valid + .text 
+{
+    top: -35px;
+    left: -10px;
+}.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+height: 100%;
+}
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: rgb(8, 0, 0);
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    }
+    .btn-neon:hover{
+     background: #e2ddff;
+     box-shadow: 0 0 10px #3382fa, 0 0 40px #3382fa, 0 0 80px #3382fa;
+     transition-delay: 1s;
+     }
+    .btn-neon span{
+     position: absolute;
+     display: block;
+            }
+     #span1{
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg, transparent,#2305ce);
+     }
+     .btn-neon:hover #span1{
+     left: 100%;
+     transition: 1s;
+     }
+     #span3{
+     bottom: 0;
+     right: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(270deg, transparent,#2305ce);
+     }
+     .btn-neon:hover #span3{
+      right: 100%;
+      transition: 1s;
+      transition-delay: 0.5s;
+      }
+      #span2{
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent,#2305ce);
+      }
+      .btn-neon:hover #span2{
+      top: 100%;
+      transition: 1s;
+      transition-delay: 0.25s;
+      }
+      #span4{
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent,#2305ce);
+      }
+      .btn-neon:hover #span4{
+      bottom: 100%;
+      transition: 1s;
+      transition-delay: 0.75s;
+      }
